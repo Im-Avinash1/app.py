@@ -7,7 +7,7 @@ from st_weaviate_connection import WeaviateConnection, WeaviateFilter
 from weaviate.classes.query import Filter
 
 # Constants
-ENV_VARS = ["WEAVIATE_URL", "WEAVIATE_API_KEY", "COHERE_API_KEY"]
+ENV_VARS = ["https://hha2nvjsruetknc5vxwrwa.c0.europe-west2.gcp.weaviate.cloud", "nMZuw1z1zvtnjkXXOMGx90ws7YWGSsakItdus", "JaLagsYZvL2KgTDfuXBtifi4uGj8Qz07WUbrjNzq"]
 NUM_RECOMMENDATIONS_PER_ROW = 5
 SEARCH_LIMIT = 10
 
@@ -74,7 +74,7 @@ def setup_weaviate_connection(env_vars):
     return st.connection(
         "weaviate",
         type=WeaviateConnection,
-        url=env_vars["https://hha2nvjsruetknc5vxwrwa.c0.europe-west2.gcp.weaviate.clod"],
+        url=env_vars["https://hha2nvjsruetknc5vxwrwa.c0.europe-west2.gcp.weaviate.cloud"],
         api_key=env_vars["nMZuw1z1zvtnjkXXOMGx90ws7YWGSsakItdus"],
         additional_headers={"X-Cohere-Api-Key": env_vars["JaLagsYZvL2KgTDfuXBtifi4uGj8Qz07WUbrjNzq"]},
     )
